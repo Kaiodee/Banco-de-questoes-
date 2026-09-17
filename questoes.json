@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "MU4S66KL1",
+    "banca": "FAT Concursos",
+    "instituicao": "CET SP",
+    "ano": "2008",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Analise as afirmações abaixo. I. Dado é um fenômeno (valor) qualquer desprovido de um significado; no momento em que o dado é contextualizado em um determinado nível de abstração, passa a ser identificado como uma informação. II. Os conceitos de informação e dado são sinônimos, em muitos contextos, intercambiáveis. III. Informação é o resultado do processamento, manipulação e organização de dados de tal forma que represente um acréscimo ao conhecimento da pessoa que a recebe. IV. Dados são resultantes do processamento das informações. O processamento pode ser constituído por um conjunto de atividades que envolvem cálculo, comparação, ordenação. Estão corretas as afirmações:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I, III, IV",
+        "explicacao": "Incorreta. A afirmativa IV está invertida: a informação é que resulta do processamento dos dados."
+      },
+      {
+        "letra": "B",
+        "texto": "I, II e III",
+        "explicacao": "Incorreta. A afirmativa II generaliza indevidamente que dado e informação são sinônimos."
+      },
+      {
+        "letra": "C",
+        "texto": "I, III",
+        "explicacao": "Correta. I e III apresentam corretamente a relação entre dado, contexto e informação."
+      },
+      {
+        "letra": "D",
+        "texto": "I, IV",
+        "explicacao": "Incorreta. A afirmativa IV inverte a relação entre dados e informação."
+      }
+    ],
+    "correta": "C",
+    "comentario": "Dados podem ser entendidos como valores sem contexto. A informação surge quando esses dados são processados, organizados e contextualizados, acrescentando conhecimento.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL2",
+    "banca": "Instituto Consulplan",
+    "instituicao": "TJ RO",
+    "ano": "2025",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Dependendo da forma de definição e armazenamento, os conjuntos de dados são tipicamente caracterizados como estruturados, semiestruturados e não estruturados. Analise as afirmativas: I. Enquanto dados não estruturados são normalmente armazenados em seu formato nativo, dados estruturados são armazenados em linhas e colunas e podem ser mapeados para campos predefinidos. II. Ao contrário dos dados estruturados, que podem ser organizados e acessados por meio de bancos de dados relacionais, dados não estruturados não têm um modelo rígido de organização predefinido. III. Conjuntos de dados semiestruturados usam tags e marcadores em vez de exigir um esquema predefinido em tabelas, linhas e colunas. Está correto o que se afirma em:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I, II, III",
+        "explicacao": "Correta. As três afirmativas descrevem corretamente dados estruturados, não estruturados e semiestruturados."
+      },
+      {
+        "letra": "B",
+        "texto": "I e III, apenas.",
+        "explicacao": "Incorreta. A afirmativa II também está correta."
+      },
+      {
+        "letra": "C",
+        "texto": "II, apenas.",
+        "explicacao": "Incorreta. As afirmativas I e III também estão corretas."
+      },
+      {
+        "letra": "D",
+        "texto": "I, apenas.",
+        "explicacao": "Incorreta. II e III também estão corretas."
+      },
+      {
+        "letra": "E",
+        "texto": "III, apenas.",
+        "explicacao": "Incorreta. I e II também estão corretas."
+      }
+    ],
+    "correta": "A",
+    "comentario": "Dados estruturados seguem esquema rígido, normalmente organizado em linhas e colunas. Dados não estruturados não possuem estrutura predefinida. Dados semiestruturados possuem alguma organização flexível, como ocorre em XML e JSON.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL3",
+    "banca": "COSEAC UFF",
+    "instituicao": "UFF",
+    "ano": "2025",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "A representação dos dados em um arquivo de e-mail sem uma organização específica e a representação dos dados em um cadastro de um paciente com atributos não previamente definidos são exemplos, respectivamente, de formatos de:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "dados estruturados e dados semiestruturados.",
+        "explicacao": "Incorreta. Um arquivo de e-mail sem organização específica é considerado dado não estruturado."
+      },
+      {
+        "letra": "B",
+        "texto": "dados semiestruturados e dados não estruturados.",
+        "explicacao": "Incorreta. O primeiro exemplo é não estruturado e o segundo é semiestruturado."
+      },
+      {
+        "letra": "C",
+        "texto": "dados estruturados e dados não estruturados.",
+        "explicacao": "Incorreta. Nenhum dos exemplos corresponde a essa combinação."
+      },
+      {
+        "letra": "D",
+        "texto": "dados não estruturados e dados semiestruturados.",
+        "explicacao": "Correta. O e-mail sem organização específica é não estruturado, enquanto o cadastro com atributos flexíveis é semiestruturado."
+      },
+      {
+        "letra": "E",
+        "texto": "dados semiestruturados e dados estruturados.",
+        "explicacao": "Incorreta. O cadastro com atributos não previamente definidos não possui estrutura rígida."
+      }
+    ],
+    "correta": "D",
+    "comentario": "Dados sem estrutura clara são classificados como não estruturados. Quando existe alguma estrutura, mas os atributos não são rigidamente definidos, os dados são semiestruturados.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL4",
+    "banca": "Instituto CONSULPAM",
+    "instituicao": "Não informada no material",
+    "ano": "2024",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "São um conjunto de arquivos relacionados entre si com registros sobre pessoas, lugares ou coisas. São coleções organizadas que se relacionam de forma a criar algum sentido (informação) e dar mais eficiência durante uma pesquisa ou estudo. A descrição refere-se a:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Banco de Talentos",
+        "explicacao": "Incorreta. Banco de talentos normalmente corresponde a um cadastro de candidatos ou profissionais."
+      },
+      {
+        "letra": "B",
+        "texto": "Banco de Horas",
+        "explicacao": "Incorreta. Banco de horas está relacionado ao controle de horas trabalhadas."
+      },
+      {
+        "letra": "C",
+        "texto": "Banco de Dados",
+        "explicacao": "Correta. Um banco de dados consiste em uma coleção organizada e relacionada de dados."
+      },
+      {
+        "letra": "D",
+        "texto": "Banco de Fomento",
+        "explicacao": "Incorreta. Banco de fomento está relacionado a instituições financeiras de crédito ou desenvolvimento."
+      }
+    ],
+    "correta": "C",
+    "comentario": "A descrição corresponde ao conceito de banco de dados: uma coleção organizada de dados relacionados que possuem significado dentro de determinado contexto.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL5",
+    "banca": "FGV",
+    "instituicao": "AL MT",
+    "ano": "2013",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Características que distinguem a abordagem de bancos de dados relacionais e centralizados da abordagem tradicional, baseada em processamento de arquivos, estão listadas a seguir à exceção de uma. Assinale-a.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Compartilhamento de dados e processamento de transações multiusuários.",
+        "explicacao": "Incorreta como resposta à questão, pois essa é uma característica da abordagem de banco de dados."
+      },
+      {
+        "letra": "B",
+        "texto": "Suporte para múltiplas visões de dados.",
+        "explicacao": "Incorreta como resposta à questão, pois SGBDs permitem diferentes visões dos mesmos dados."
+      },
+      {
+        "letra": "C",
+        "texto": "Isolamento entre os programas e os dados.",
+        "explicacao": "Incorreta como resposta à questão, pois o isolamento entre programas e dados é uma característica da abordagem de banco de dados."
+      },
+      {
+        "letra": "D",
+        "texto": "Dados são armazenados e tratados somente como cadeias de caracteres.",
+        "explicacao": "Correta. Bancos de dados não armazenam e tratam dados exclusivamente como cadeias de caracteres."
+      },
+      {
+        "letra": "E",
+        "texto": "Natureza autodescritiva do sistema de bancos de dados.",
+        "explicacao": "Incorreta como resposta à questão, pois a natureza autodescritiva é uma característica dos sistemas de banco de dados."
+      }
+    ],
+    "correta": "D",
+    "comentario": "Entre as características da abordagem de banco de dados estão a natureza autodescritiva, o isolamento entre programas e dados, múltiplas visões e o compartilhamento de dados com processamento multiusuário.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL6",
+    "banca": "SELECON",
+    "instituicao": "EMGEPRON",
+    "ano": "2021",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Na implementação de bancos de dados relacionais, busca-se solucionar ou minimizar dois problemas. I. Ocorrência de informações armazenadas em arquivos separados, com conteúdos diferentes. II. Existência das mesmas informações em aplicações diferentes. As descrições em I e II referem-se, respectivamente, aos seguintes termos:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "inconsistência e redundância",
+        "explicacao": "Correta. Valores divergentes para a mesma informação caracterizam inconsistência, enquanto a repetição da mesma informação caracteriza redundância."
+      },
+      {
+        "letra": "B",
+        "texto": "inconsistência e dependência",
+        "explicacao": "Incorreta. O segundo problema apresentado corresponde à redundância."
+      },
+      {
+        "letra": "C",
+        "texto": "integridade e redundância",
+        "explicacao": "Incorreta. O primeiro problema corresponde à inconsistência, não à integridade."
+      },
+      {
+        "letra": "D",
+        "texto": "integridade e dependência",
+        "explicacao": "Incorreta. Os conceitos apresentados são inconsistência e redundância."
+      }
+    ],
+    "correta": "A",
+    "comentario": "Inconsistência ocorre quando a mesma informação possui valores divergentes em locais diferentes. Redundância ocorre quando a mesma informação é armazenada repetidamente.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL7",
+    "banca": "Machado de Assis",
+    "instituicao": "CM Estreito",
+    "ano": "2016",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Julgue os itens: I. BD é uma coleção de dados interligados, representando informações sobre um domínio específico. II. SGBD é um software com recursos específicos para facilitar a manipulação das informações de um BD e o desenvolvimento de programas aplicativos. III. SBD é um sistema de manutenção de registros por computador envolvendo apenas um componente principal: dados.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Apenas a afirmativa I é verdadeira.",
+        "explicacao": "Incorreta. As afirmativas I e II são verdadeiras."
+      },
+      {
+        "letra": "B",
+        "texto": "Apenas as afirmativas I e II são verdadeiras.",
+        "explicacao": "Correta. I define corretamente banco de dados e II descreve corretamente um SGBD. A afirmativa III está errada."
+      },
+      {
+        "letra": "C",
+        "texto": "Apenas as afirmativas I e III são verdadeiras.",
+        "explicacao": "Incorreta. A afirmativa III é falsa e a II é verdadeira."
+      },
+      {
+        "letra": "D",
+        "texto": "Todas as afirmativas são verdadeiras.",
+        "explicacao": "Incorreta. A afirmativa III é falsa."
+      }
+    ],
+    "correta": "B",
+    "comentario": "Um banco de dados contém dados inter-relacionados. O SGBD é o software responsável por gerenciar esses dados. Um sistema de banco de dados não envolve apenas dados, mas também o SGBD e outros componentes.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL8",
+    "banca": "DIRENS Aeronáutica",
+    "instituicao": "EEAR",
+    "ano": "2018",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Qual das alternativas a seguir não apresenta um dos componentes essenciais de um banco de dados?",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Uma base de dados",
+        "explicacao": "Incorreta como resposta, pois os dados fazem parte de um sistema de banco de dados."
+      },
+      {
+        "letra": "B",
+        "texto": "Dicionário de dados",
+        "explicacao": "Correta. O material apresenta como componentes principais dados, hardware, software e usuários; o dicionário de dados não aparece como componente principal separado."
+      },
+      {
+        "letra": "C",
+        "texto": "Um sistema gerenciador de banco de dados",
+        "explicacao": "Incorreta como resposta, pois o SGBD faz parte do componente de software."
+      },
+      {
+        "letra": "D",
+        "texto": "Programas voltados a necessidades objetivas",
+        "explicacao": "Incorreta como resposta, pois programas integram o componente de software do sistema."
+      }
+    ],
+    "correta": "B",
+    "comentario": "Segundo o material, um sistema de banco de dados envolve quatro componentes principais: dados, hardware, software e usuários.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL9",
+    "banca": "FCC",
+    "instituicao": "SANASA",
+    "ano": "2019",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Uma característica fundamental da abordagem de banco de dados é que o sistema possui não apenas o banco de dados, mas também uma definição completa de sua estrutura e restrições. O local que contém informações sobre a estrutura, tipos, formatos e restrições dos dados, e a denominação das informações nele armazenadas, são, respectivamente:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "modelo de dados – tupla.",
+        "explicacao": "Incorreta. Tupla corresponde normalmente a um registro, e não à descrição da estrutura do banco."
+      },
+      {
+        "letra": "B",
+        "texto": "modelo de dados – transações enlatadas.",
+        "explicacao": "Incorreta. A descrição da estrutura do banco corresponde aos metadados."
+      },
+      {
+        "letra": "C",
+        "texto": "software SGBD – transações enlatadas.",
+        "explicacao": "Incorreta. A descrição não recebe a denominação de transações enlatadas."
+      },
+      {
+        "letra": "D",
+        "texto": "catálogo do SGBD – metadados.",
+        "explicacao": "Correta. O catálogo, também conhecido como dicionário de dados, armazena os metadados."
+      },
+      {
+        "letra": "E",
+        "texto": "módulo buffering – metadados.",
+        "explicacao": "Incorreta. Os metadados são armazenados no catálogo do SGBD."
+      }
+    ],
+    "correta": "D",
+    "comentario": "O catálogo do SGBD armazena os metadados, isto é, dados que descrevem a estrutura do próprio banco, como tabelas, colunas, tipos e restrições.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MU4S66KL10",
+    "banca": "CEBRASPE",
+    "instituicao": "APEX",
+    "ano": "2021",
+    "disciplina": "Banco de Dados",
+    "assunto": "",
+    "cargo": "",
+    "enunciado": "Assinale a opção em que o termo apresentado corresponde a uma sequência de instruções de consulta e/ou atualização de banco de dados.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "commit",
+        "explicacao": "Incorreta. Commit confirma e finaliza com sucesso as alterações realizadas por uma transação."
+      },
+      {
+        "letra": "B",
+        "texto": "rollback",
+        "explicacao": "Incorreta. Rollback desfaz as alterações realizadas durante uma transação."
+      },
+      {
+        "letra": "C",
+        "texto": "truncate",
+        "explicacao": "Incorreta. Truncate é utilizado para remover os registros de uma tabela."
+      },
+      {
+        "letra": "D",
+        "texto": "transaction",
+        "explicacao": "Correta. Uma transação representa uma unidade lógica de trabalho formada por um ou mais acessos ao banco, como consultas e atualizações."
+      }
+    ],
+    "correta": "D",
+    "comentario": "Uma transação é uma unidade lógica de trabalho que pode envolver várias operações sobre o banco de dados, incluindo leitura e atualização.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MRP46RAR1",
+    "banca": "FUNDATEC",
+    "instituicao": "IFC",
+    "ano": "2023",
+    "disciplina": "Programação",
+    "assunto": "Algoritmos",
+    "cargo": "",
+    "enunciado": "Em relação a algoritmos, analise as assertivas abaixo:\n\nI. Um algoritmo representa uma sequência de regras.\nII. Essas regras devem ser executadas em uma ordem preestabelecida.\nIII. Cada algoritmo possui um conjunto finito de regras.\nIV. Essas regras devem possuir um significado e ser formalizadas segundo alguma convenção.\n\nQuais estão corretas?",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Apenas I e II.",
+        "explicacao": "Incorreta. As assertivas III e IV também estão corretas."
+      },
+      {
+        "letra": "B",
+        "texto": "Apenas I e III.",
+        "explicacao": "Incorreta. As assertivas II e IV também estão corretas."
+      },
+      {
+        "letra": "C",
+        "texto": "Apenas II e IV.",
+        "explicacao": "Incorreta. As assertivas I e III também estão corretas."
+      },
+      {
+        "letra": "D",
+        "texto": "Apenas II, III e IV.",
+        "explicacao": "Incorreta. A assertiva I também está correta."
+      },
+      {
+        "letra": "E",
+        "texto": "I, II, III e IV.",
+        "explicacao": "Correta. Um algoritmo é uma sequência finita e ordenada de instruções, executadas em uma ordem preestabelecida e escritas conforme uma convenção ou linguagem, garantindo interpretação e execução corretas."
+      }
+    ],
+    "correta": "E",
+    "comentario": "Todas as assertivas estão corretas. Um algoritmo consiste em uma sequência finita de instruções organizadas em uma ordem lógica para resolver um problema. Além disso, essas instruções devem seguir uma convenção de escrita (como pseudocódigo ou uma linguagem de programação), permitindo que sejam compreendidas e executadas corretamente.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MRP46RAR2",
+    "banca": "CETAP",
+    "instituicao": "SEMAS PA",
+    "ano": "2023",
+    "disciplina": "Programação",
+    "assunto": "Recursividade",
+    "cargo": "",
+    "enunciado": "Em que situação a recursividade é apropriada como solução para um problema de programação?",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Quando o problema pode ser dividido em subproblemas independentes e semelhantes ao problema inicial.",
+        "explicacao": "Correta. A recursividade é indicada quando um problema pode ser decomposto em subproblemas menores e semelhantes ao original, até atingir um caso-base."
+      },
+      {
+        "letra": "B",
+        "texto": "Quando o problema é simples, ilógico e linear.",
+        "explicacao": "Incorreta. A recursividade é utilizada em problemas com estrutura recursiva e lógica bem definida."
+      },
+      {
+        "letra": "C",
+        "texto": "Quando o problema requer a utilização de laços de repetição.",
+        "explicacao": "Incorreta. Nessa situação normalmente utilizam-se estruturas iterativas, como PARA ou ENQUANTO."
+      },
+      {
+        "letra": "D",
+        "texto": "Quando o problema é de natureza elétrica, o que demanda maior capacidade de processamento.",
+        "explicacao": "Incorreta. A natureza elétrica do problema não tem relação com a aplicação da recursividade."
+      },
+      {
+        "letra": "E",
+        "texto": "Quando o problema requer uma solução iterativa, ou seja, uma sequência de soluções que admitem certa margem de erro, mas que vão melhorando conforme novas iterações são executadas.",
+        "explicacao": "Incorreta. Essa descrição refere-se a métodos iterativos, e não à recursividade."
+      }
+    ],
+    "correta": "A",
+    "comentario": "A recursividade é indicada quando um problema pode ser dividido em subproblemas menores da mesma natureza. Cada chamada recursiva resolve uma parte do problema até alcançar um caso-base, que interrompe as chamadas.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "MRP3JEU31",
+    "banca": "CEBRASPE",
+    "instituicao": "Prefeitura de Fortaleza",
+    "ano": "2023",
+    "disciplina": "Programação",
+    "assunto": "Recursividade",
+    "cargo": "",
+    "enunciado": "Uma grande vantagem da utilização da recursividade é o baixo consumo de memória.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Correto",
+        "explicacao": "Incorreta. A recursividade não possui baixo consumo de memória. Cada chamada recursiva adiciona um novo quadro (stack frame) à pilha de execução, aumentando o uso de memória."
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": "Correta. Uma das desvantagens da recursividade é justamente o maior consumo de memória devido ao empilhamento das chamadas da função. Em muitos casos, uma solução iterativa é mais eficiente em termos de memória."
+      }
+    ],
+    "correta": "B",
+    "comentario": "A recursividade utiliza a pilha de chamadas (call stack), armazenando informações de cada execução da função até atingir o caso-base. Isso aumenta o consumo de memória, tornando essa afirmação incorreta.",
+    "areaFormacao": "TI"
+  },
+  {
+    "id": "QCEBRASPE2023-001",
+    "banca": "CEBRASPE",
+    "instituicao": "Prefeitura de Fortaleza",
+    "ano": "2023",
+    "disciplina": "Programação",
+    "assunto": "Estruturas de Repetição",
+    "cargo": "",
+    "enunciado": "Com relação a estruturas de controle, seleção, repetição e desvio, julgue o item a seguir.\n\nNo algoritmo abaixo, o comando 'x = x + 10' é executado quatro vezes.\n\nx = 10;\npara (y = 40; y < 100; y = y + 16)\n    x = x + 10;\nfim para",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Correto.",
+        "explicacao": "O laço executa para y = 40, 56, 72 e 84. A próxima iteração faria y = 100, que não satisfaz a condição y < 100. Portanto, o comando é executado exatamente quatro vezes."
+      },
+      {
+        "letra": "B",
+        "texto": "Errado.",
+        "explicacao": "Incorreta. A condição do laço impede a execução quando y atinge 100."
+      }
+    ],
+    "correta": "A",
+    "comentario": "O laço inicia com y = 40 e incrementa 16 a cada repetição. As execuções ocorrem com y = 40, 56, 72 e 84. Após a quarta execução, y passa a valer 100, tornando a condição y < 100 falsa. Assim, o comando 'x = x + 10' é executado exatamente quatro vezes."
+  },
+  {
+    "id": "Q3086006",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Arquitetura de Software",
+    "assunto": "SOA (Service-oriented architecture)",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Uma empresa de comércio eletrônico decidiu integrar seus sistemas de pagamento usando uma arquitetura orientada a serviços e web services como a tecnologia de integração. A ação correta na implementação dessa solução para garantir baixo acoplamento e alta interoperabilidade entre os sistemas seria",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "usar RESTful Web Services, que permitem a comunicação entre os sistemas de forma leve e independente de plataforma, promovendo maior flexibilidade e baixo acoplamento entre os serviços.",
+        "explicacao": "REST utiliza padrões amplamente adotados, comunicação leve e baixo acoplamento entre os serviços."
+      },
+      {
+        "letra": "B",
+        "texto": "implementar serviços SOAP sem definição de contratos formais para aumentar a flexibilidade da comunicação entre o sistema de pagamento e os provedores.",
+        "explicacao": "SOAP depende de contratos formais (WSDL). Removê-los reduz a interoperabilidade."
+      },
+      {
+        "letra": "C",
+        "texto": "utilizar interoperabilidade de rede entre os serviços de pagamento e os provedores, pois isso assegura baixo acoplamento e que as mudanças em um dos serviços se reflitam diretamente no outro, evitando inconsistências.",
+        "explicacao": "Baixo acoplamento evita justamente dependências diretas entre os serviços."
+      },
+      {
+        "letra": "D",
+        "texto": "definir um modelo de arquitetura monolítica com todos os provedores de pagamento integrados diretamente ao sistema, eliminando a necessidade de comunicação via Web Services e, assim, melhorando o desempenho.",
+        "explicacao": "Arquitetura monolítica aumenta o acoplamento e reduz a flexibilidade."
+      },
+      {
+        "letra": "E",
+        "texto": "empregar Web Services com RPC (Remote Procedure Call) e WDSL para garantir que a chamada dos métodos seja feita diretamente entre o sistema de pagamento e os provedores, simplificando a integração.",
+        "explicacao": "RPC aumenta o acoplamento e a sigla correta é WSDL."
+      }
+    ],
+    "correta": "A",
+    "comentario": "RESTful Web Services favorecem baixo acoplamento, interoperabilidade e independência de plataforma, princípios importantes da arquitetura SOA."
+  },
+  {
+    "id": "Q3086007",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Segurança da Informação",
+    "assunto": "Segurança na Internet",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Em um ambiente corporativo, uma empresa de e-commerce precisa garantir a segurança das transações realizadas por seus clientes através de seu site. Para isso, o site utiliza o protocolo HTTPS, que combina o protocolo HTTP com uma camada adicional de segurança. Assinale a opção que apresenta a diferença entre os protocolos SSL e TLS no contexto de sua aplicação em comunicações seguras via HTTPS.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O SSL é mais seguro que o TLS, pois utiliza um algoritmo de criptografia mais avançado.",
+        "explicacao": "SSL possui vulnerabilidades conhecidas e foi substituído pelo TLS."
+      },
+      {
+        "letra": "B",
+        "texto": "O TLS substitui o SSL, corrigindo vulnerabilidades encontradas nas versões anteriores do SSL e implementando melhorias de segurança.",
+        "explicacao": "Correta. TLS é a evolução do SSL e elimina diversas vulnerabilidades."
+      },
+      {
+        "letra": "C",
+        "texto": "O TLS e o SSL são intercambiáveis, pois ambos oferecem o mesmo nível de segurança.",
+        "explicacao": "TLS oferece maior segurança que SSL."
+      },
+      {
+        "letra": "D",
+        "texto": "O HTTPS só funciona com o protocolo SSL.",
+        "explicacao": "HTTPS funciona normalmente com TLS."
+      },
+      {
+        "letra": "E",
+        "texto": "O SSL e o TLS são usados conjuntamente, sendo o SSL para autenticação e o TLS para criptografia.",
+        "explicacao": "São protocolos alternativos, não complementares."
+      }
+    ],
+    "correta": "B",
+    "comentario": "O TLS é o sucessor do SSL e corrige vulnerabilidades presentes nas versões antigas, sendo atualmente o protocolo utilizado pelo HTTPS."
+  },
+  {
+    "id": "Q3086008",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Engenharia de Software",
+    "assunto": "Desenvolvimento de Software",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Em projetos de desenvolvimento de software, a escolha da técnica de mensuração de tamanho e esforço é essencial para a gestão eficiente e o planejamento adequado das atividades. Nesse contexto, é correto afirmar que",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "o Ponto de Função oferece uma mensuração objetiva e independente do time de desenvolvimento.",
+        "explicacao": "Correta. Pontos de Função medem o tamanho funcional do software independentemente da equipe."
+      },
+      {
+        "letra": "B",
+        "texto": "os Story Points permitem uma melhor padronização de estimativas entre diferentes projetos e times.",
+        "explicacao": "Story Points são subjetivos e variam entre equipes."
+      },
+      {
+        "letra": "C",
+        "texto": "o Ponto de Função é mais flexível, já que leva em conta o contexto subjetivo do time ao estimar o esforço.",
+        "explicacao": "Pontos de Função são objetivos, não subjetivos."
+      },
+      {
+        "letra": "D",
+        "texto": "os Story Points são mais adequados para contratos formais de desenvolvimento.",
+        "explicacao": "Contratos normalmente utilizam métricas objetivas como Pontos de Função."
+      },
+      {
+        "letra": "E",
+        "texto": "o Ponto de Função permite uma mensuração rápida, baseada no esforço percebido pelo time.",
+        "explicacao": "Essa característica pertence aos Story Points."
+      }
+    ],
+    "correta": "A",
+    "comentario": "Pontos de Função medem o tamanho funcional do software de forma objetiva e independente da equipe, sendo amplamente utilizados em contratos."
+  },
+  {
+    "id": "Q3086009",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Programação",
+    "assunto": "Desenvolvimento Mobile",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "No desenvolvimento de aplicativos móveis para Android e iOS, uma das abordagens mais comuns é o uso de frameworks que permitem o desenvolvimento multiplataforma, reduzindo o esforço de criação de código para cada sistema operacional. O framework popular para o desenvolvimento multiplataforma e que utiliza a linguagem Dart é chamado de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Xamarin.",
+        "explicacao": "Utiliza C#."
+      },
+      {
+        "letra": "B",
+        "texto": "Flutter.",
+        "explicacao": "Correta. Flutter utiliza a linguagem Dart."
+      },
+      {
+        "letra": "C",
+        "texto": "React Native.",
+        "explicacao": "Utiliza JavaScript ou TypeScript."
+      },
+      {
+        "letra": "D",
+        "texto": "Ionic.",
+        "explicacao": "Utiliza HTML, CSS e JavaScript."
+      },
+      {
+        "letra": "E",
+        "texto": "SwiftUI.",
+        "explicacao": "Framework nativo da Apple utilizando Swift."
+      }
+    ],
+    "correta": "B",
+    "comentario": "Flutter é o framework multiplataforma desenvolvido pelo Google e utiliza a linguagem Dart."
+  },
+  {
+    "id": "Q3086005",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Noções de Informática",
+    "assunto": "Internet",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Uma empresa multinacional está implantando diferentes tipos de redes para melhorar a comunicação e o compartilhamento de informações entre seus funcionários, parceiros e clientes. Cada tipo de rede tem finalidades e características distintas, como o nível de acesso e o público-alvo.\n\nCom base nos conceitos de Internet, extranet, intranet e portal, assinale a opção que descreve corretamente o uso dessas redes em um ambiente corporativo.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "A intranet é uma rede pública global que conecta milhões de computadores ao redor do mundo, permitindo a comunicação e o compartilhamento de informações sem restrições.",
+        "explicacao": "Incorreta. Essa definição corresponde à Internet. A intranet é uma rede privada utilizada internamente por uma organização."
+      },
+      {
+        "letra": "B",
+        "texto": "A extranet permite que organizações compartilhem informações internamente, sendo acessível apenas por funcionários dentro da rede corporativa.",
+        "explicacao": "Incorreta. Essa é a definição de intranet. A extranet também permite acesso a usuários externos autorizados, como parceiros e fornecedores."
+      },
+      {
+        "letra": "C",
+        "texto": "O portal corporativo interno é uma página da web acessada publicamente, centralizando informações e serviços para usuários externos, como clientes e fornecedores.",
+        "explicacao": "Incorreta. Um portal corporativo interno é destinado aos colaboradores da organização e normalmente é acessado por meio da intranet."
+      },
+      {
+        "letra": "D",
+        "texto": "A Internet é uma rede restrita, acessível apenas a usuários autorizados, projetada para compartilhar informações dentro de uma organização.",
+        "explicacao": "Incorreta. Essa descrição corresponde à intranet. A Internet é uma rede pública e mundial."
+      },
+      {
+        "letra": "E",
+        "texto": "A extranet é uma rede que utiliza tecnologias da Internet para permitir o acesso controlado a informações e serviços de uma organização, tanto para usuários internos quanto para parceiros externos autorizados.",
+        "explicacao": "Correta. A extranet estende a intranet, permitindo acesso seguro e controlado a parceiros, fornecedores, clientes ou outras entidades externas autorizadas."
+      }
+    ],
+    "correta": "E",
+    "comentario": "A Internet é uma rede pública mundial. A intranet é uma rede privada de uso interno da organização. A extranet amplia a intranet, concedendo acesso controlado a usuários externos autorizados, como clientes, parceiros e fornecedores. Já o portal corporativo é um ambiente que centraliza informações, aplicações e serviços para um público específico, podendo ser interno ou externo conforme sua finalidade."
+  },
+  {
+    "id": "INEDITA01",
+    "banca": "Inédita",
+    "instituicao": "Estratégia Concursos",
+    "ano": "2026",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Conceitos Gerais",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Na programação, um algoritmo é uma sequência lógica de passos, modeladas em torno de um problema - visando dar uma solução a ele, através de passos sequenciais. Julgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "Com um algoritmo elencamos uma sequência lógica de passos, que são executados sequencialmente, visando solucionar determinado problema através da execução de uma tarefa."
+  },
+  {
+    "id": "CEBRASPE2024_01",
+    "banca": "CEBRASPE",
+    "instituicao": "CAU BR",
+    "ano": "2024",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Linguagens de Programação",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "O pseudocódigo consiste em um text estruturado com comandos escritos em linguagem humana, no qual se apoia a criação dos algoritmos computacionais. Julgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "O pseudocódigo é um texto estruturado, que não segue regras e padrões específicos, usado para descrever a lógica de um algoritmo sem se preocupar com a implementação específica de uma linguagem."
+  },
+  {
+    "id": "CEBRASPE2024_02",
+    "banca": "CEBRASPE",
+    "instituicao": "CAU BR",
+    "ano": "2024",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Tipagem de Dados",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Os dados de um algoritmo devem ser definidos por tipos para que seus conteúdos possam ser submetidos a operações corretas, inerentes a cada tipo de dado. Julgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "Apesar da definição se dar ora de forma expressa, ora de forma implícita (na tipagem dinâmica), ele sempre deve ser definido, de forma que o interpretador do código consiga fazer as operações de forma correta e íntegra."
+  },
+  {
+    "id": "INEDITA02",
+    "banca": "Inédita",
+    "instituicao": "Estratégia Concursos",
+    "ano": "2026",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Indentação",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "A indentação é um processo essencial na construção de códigos. Além de garantir uma melhor leitura do código, algumas linguagens, como Python, utilizam a indentação como forma de garantir a hierarquia dentro do código. Julgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "O processo de indentação ajuda a visualizar melhor a hierarquia dos blocos de comandos, além de ser obrigatória para implementar algumas linguagens, como o Python."
+  },
+  {
+    "id": "CEBRASPE2023_01",
+    "banca": "CEBRASPE",
+    "instituicao": "EMPREL",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Operadores Matemáticos",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Considere o pseudocódigo precedente:\n\ncalc = 5 % 2\nimprime(calc)\n\nAssinale a opção que apresenta o resultado da execução desse pseudocódigo:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "1",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "2",
+        "explicacao": ""
+      },
+      {
+        "letra": "C",
+        "texto": "10",
+        "explicacao": ""
+      },
+      {
+        "letra": "D",
+        "texto": "20",
+        "explicacao": ""
+      },
+      {
+        "letra": "E",
+        "texto": "25",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "A operação de módulo (%) retorna o resto de uma divisão. Na divisão inteira de 5 por 2, o quociente é 2 e resta 1."
+  },
+  {
+    "id": "CEBRASPE2023_02",
+    "banca": "CEBRASPE",
+    "instituicao": "Prefeitura de Fortaleza",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Avaliação de Expressões",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Após o algoritmo a seguir ser executado, os valores das variáveis c e d serão iguais.\n\nreal d\nreal c\nd = 6 / -2 + -3 * -2 - 3\nescreva(d)\nc = 6 / -2 + 3 * 2 - 3\nescreva(c)\n\nJulgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "Resolução respeitando a precedência de operadores:\nd = (6 / -2) + (-3 * -2) - 3 => d = -3 + 6 - 3 => d = 0.\nc = (6 / -2) + (3 * 2) - 3 => c = -3 + 6 - 3 => c = 0. Como ambos resultam em 0, os valores são iguais."
+  },
+  {
+    "id": "CEBRASPE2023_03",
+    "banca": "CEBRASPE",
+    "instituicao": "Prefeitura de Fortaleza",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Operadores Lógicos",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Considere o algoritmo precedente:\n\nreal c, b, d;\nreal x, y;\nc = 5\nb = 8;\nd = 3\nx = (c < b) ou (b < d) e (c < d);\ny = ((c < b) ou (b < d)) e (c < d);\nescreva(x);\nescreva(y);\n\nApós a execução desse algoritmo, os valores das variáveis x e y serão diferentes. Julgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "A",
+    "comentario": "Substituindo os valores:\nx = (5 < 8) ou (8 < 3) e (5 < 3) => V ou F e F. Respeitando a precedência (E antes do OU): V ou (F e F) => V ou F = 1 (Verdadeiro).\ny = ((5 < 8) ou (8 < 3)) e (5 < 3) => (V ou F) e F. Respeitando os parênteses: V e F = 0 (Falso). Como x=1 e y=0, eles são diferentes."
+  },
+  {
+    "id": "FGV2023_01",
+    "banca": "FGV",
+    "instituicao": "Câmara dos Deputados",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Operações Bitwise",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Analise as operações bitwise do JavaScript, exibidas a seguir:\n\n4 & 1\n7 | 2\n~-5\n9 >> 2\n9 >>> 1\n\nOs valores de cada uma dessas expressões, na ordem, são:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "0; 7; 5; 1; 2",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "1; 9; 5; 1; 2",
+        "explicacao": ""
+      },
+      {
+        "letra": "C",
+        "texto": "0; 7; 4; 2; 4",
+        "explicacao": ""
+      },
+      {
+        "letra": "D",
+        "texto": "0; 9; 4; 0; 4",
+        "explicacao": ""
+      },
+      {
+        "letra": "E",
+        "texto": "1; 1; -5; 4; 2",
+        "explicacao": ""
+      }
+    ],
+    "correta": "C",
+    "comentario": "Análise detalhada:\n1) 4 & 1 => 0100 & 0001 = 0000 (0).\n2) 7 | 2 => 0111 | 0010 = 0111 (7).\n3) ~-5 => Formula ~X = -(X+1) => -(-5+1) = -(-4) = 4.\n4) 9 >> 2 => 1001 deslocado 2 casas à direita = 0010 (2).\n5) 9 >>> 1 => 1001 com preenchimento zero à direita = 0100 (4)."
+  },
+  {
+    "id": "CEBRASPE2024_03",
+    "banca": "CEBRASPE",
+    "instituicao": "CAU BR",
+    "ano": "2024",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Estruturas Condicionais",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "A estrutura de controle IF, que pode ser classificada como do tipo iteração, determina o caminho que o algoritmo deve seguir, de acordo com determinada condição. Julgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "B",
+    "comentario": "O IF (Se) determina o caminho a seguir de acordo com uma condição, porém ela é uma estrutura de SELEÇÃO, e não de iteração (iteração significa repetição/loop)."
+  },
+  {
+    "id": "VUNESP2023_02",
+    "banca": "VUNESP",
+    "instituicao": "UNICAMP",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Estruturas Condicionais",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Diagramas de blocos podem ser utilizados para expressar lógicas de programação. Considere um bloco de decisão Losango que possui duas saídas: 'Sim' e 'Não'. Esse bloco expressa, de uma forma geral, a lógica de programação do tipo:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "DO-UNTIL",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "DO-WHILE",
+        "explicacao": ""
+      },
+      {
+        "letra": "C",
+        "texto": "IF THEN - ELSE",
+        "explicacao": ""
+      },
+      {
+        "letra": "D",
+        "texto": "REPEAT - UNTIL",
+        "explicacao": ""
+      },
+      {
+        "letra": "E",
+        "texto": "SELECT - CASE",
+        "explicacao": ""
+      }
+    ],
+    "correta": "C",
+    "comentario": "O bloco expressa uma escolha/condição: se for 'Sim' segue um caminho, caso contrário ('Não') segue o outro residual. Isso indica estruturalmente o SE-ENTÃO-SENÃO (IF-THEN-ELSE)."
+  },
+  {
+    "id": "CEBRASPE2023_04",
+    "banca": "CEBRASPE",
+    "instituicao": "Prefeitura de Fortaleza",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Estruturas de Repetição",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Ao final da execução do algoritmo a seguir, o valor 0 será apresentado.\n\nconstante A = 50\nenquanto (A > 0)\n  A -= 5\nfim enquanto\nescreva(A);\n\nJulgue o item.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Certo",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "Errado",
+        "explicacao": ""
+      }
+    ],
+    "correta": "B",
+    "comentario": "A pegadinha está na definição da variável: A é declarada como uma CONSTANTE (`constante A = 50`). Valores de constantes não podem ser alterados ou reatribuídos de forma externa. A tentativa de alteração falhará ou manterá o valor original de 50."
+  },
+  {
+    "id": "FGV2023_02",
+    "banca": "FGV",
+    "instituicao": "TCE SP",
+    "ano": "2023",
+    "disciplina": "Lógica de Programação",
+    "assunto": "Estruturas de Repetição",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Marta está definindo um algoritmo para descrever um menu de funções do sistema, apresentando as opções baseadas em números, seguido da leitura da opção, com a saída ocorrendo após a digitação do número zero. Para gerenciar o fluxo de execução, Marta deve utilizar a estrutura de controle:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "enquanto faça",
+        "explicacao": ""
+      },
+      {
+        "letra": "B",
+        "texto": "se então",
+        "explicacao": ""
+      },
+      {
+        "letra": "C",
+        "texto": "repita - até",
+        "explicacao": ""
+      },
+      {
+        "letra": "D",
+        "texto": "for",
+        "explicacao": ""
+      },
+      {
+        "letra": "E",
+        "texto": "se então - senão",
+        "explicacao": ""
+      }
+    ],
+    "correta": "C",
+    "comentario": "Como o menu precisa ser exibido e lido ao menos uma vez antes de checar a opção de saída (digitação do zero), deve-se usar uma estrutura pós-teste. Em algoritmos estruturados em português, essa laço pós-teste se chama 'repita - até'."
+  },
+  {
+    "id": "Q3086003",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Programação",
+    "assunto": "XML (Extensible Markup Language)",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "Sobre as tecnologias XML, XSLT e JSON, assinale a opção correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O XML é mais eficiente que o JSON em termos de legibilidade e compactação de dados, sendo amplamente utilizado em aplicações web modernas devido à sua simplicidade.",
+        "explicacao": "Incorreta. O JSON é consideravelmente mais leve, compacto e de leitura mais simples do que o XML, sendo por isso o formato mais adotado em aplicações web modernas."
+      },
+      {
+        "letra": "B",
+        "texto": "O XSLT é uma linguagem utilizada para transformar documentos JSON em outro formato, como HTML ou XML.",
+        "explicacao": "Incorreta. O XSLT (eXtensible Stylesheet Language Transformations) foi projetado especificamente para transformar documentos XML, e não JSON."
+      },
+      {
+        "letra": "C",
+        "texto": "O JSON é amplamente utilizado em APIs devido à sua estrutura simples e leve, que facilita o transporte de dados entre cliente e servidor.",
+        "explicacao": "Correta. O formato JSON (JavaScript Object Notation) possui uma sintaxe minimalista e de baixo overhead de dados, tornando-o o padrão ideal para o tráfego ágil de informações em APIs RESTful."
+      },
+      {
+        "letra": "D",
+        "texto": "Tanto XML quanto JSON têm suporte nativo para transformação de dados utilizando XSLT, o que facilita sua manipulação em diferentes formatos.",
+        "explicacao": "Incorreta. O XSLT opera nativamente sobre a estrutura hierárquica em árvore de documentos XML, não possuindo suporte nativo equivalente para formatação direta de dados JSON."
+      },
+      {
+        "letra": "E",
+        "texto": "O XML e o JSON são formatos estritamente equivalentes em termos de expressividade e uso no armazenamento e transporte de dados em diferentes plataformas.",
+        "explicacao": "Incorreta. Embora ambos sirvam para intercâmbio de dados, eles não são estritamente equivalentes. O XML possui recursos nativos de validação de esquema rigorosos (como DTD e XSD) e suporta namespaces, enquanto o JSON é focado em estruturas de dados simples (chave/valor, listas) sem metadados pesados."
+      }
+    ],
+    "correta": "C",
+    "comentario": "Análise das alternativas:\nA) Incorreta. O JSON supera o XML em simplicidade e compactação devido à ausência de tags repetitivas.\nB) Incorreta. O XSLT é focado em XML, não em JSON.\nC) Correta. A leveza e facilidade de parsing do JSON o tornaram a escolha hegemônica para comunicação cliente-servidor.\nD) Incorreta. XSLT não processa JSON de forma nativa.\nE) Incorreta. Eles possuem modelos de dados e níveis de expressividade distintos (namespaces e metadados no XML vs. simplicidade de tipos no JSON)."
+  },
+  {
+    "id": "Q3086002",
+    "banca": "FGV",
+    "instituicao": "DATAPREV",
+    "ano": "2024",
+    "disciplina": "Engenharia de Software",
+    "assunto": "Frameworks",
+    "cargo": "Analista de Tecnologia da Informação",
+    "enunciado": "No desenvolvimento de software, os frameworks Spring, Spring Cloud, Spring Boot, Hibernate e JUnit desempenham papéis importantes na construção de aplicações modernas. Assinale a opção correta em relação às características e finalidades desses frameworks.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O Spring Boot é responsável por fornecer uma solução para desenvolvimento de microsserviços escaláveis, enquanto o Spring Cloud facilita a configuração e o gerenciamento de sistemas distribuídos.",
+        "explicacao": "Correta. O Spring Boot foca em simplificar a criação de microsserviços prontos para produção (standalone), e o Spring Cloud fornece ferramentas para resolver padrões comuns de sistemas distribuídos (como descoberta de serviços, roteamento e configuração centralizada)."
+      },
+      {
+        "letra": "B",
+        "texto": "O Hibernate é um framework de teste para aplicações Java, amplamente utilizado em conjunto com o JUnit para realizar testes de unidade.",
+        "explicacao": "Incorreta. O Hibernate é um framework de persistência de dados e mapeamento objeto-relacional (ORM), e não um framework de testes."
+      },
+      {
+        "letra": "C",
+        "texto": "O Spring é um framework voltado exclusivamente para o desenvolvimento de aplicações monolíticas, não oferecendo suporte para arquiteturas baseadas em microsserviços.",
+        "explicacao": "Incorreta. O Spring oferece suporte robusto e é um dos ecossistemas mais utilizados para a criação de arquiteturas baseadas em microsserviços, principalmente por meio do Spring Boot e do Spring Cloud."
+      },
+      {
+        "letra": "D",
+        "texto": "O JUnit é um framework de persistência utilizado para o mapeamento objeto-relacional (ORM), permitindo interações eficientes com bancos de dados.",
+        "explicacao": "Incorreta. O JUnit é um framework voltado exclusivamente para a criação e execução de testes automatizados (testes de unidade) em Java, não possuindo relação com persistência de banco de dados."
+      },
+      {
+        "letra": "E",
+        "texto": "O Spring Boot elimina a necessidade de configuração manual de dependências e servidores de aplicação, mas exige o uso de servidores como Tomcat e JBoss em modo standalone.",
+        "explicacao": "Incorreta. O Spring Boot se destaca justamente por trazer servidores web embutidos (como Tomcat ou Jetty) dentro do próprio arquivo JAR executável, dispensando a necessidade de instalar ou configurar servidores adicionais em modo standalone."
+      }
+    ],
+    "correta": "A",
+    "comentario": "Análise das alternativas:\nA) Correta. Define com precisão o papel do Spring Boot para microsserviços autossuficientes e do Spring Cloud para gerenciar a complexidade de sistemas distribuídos.\nB) Incorreta. Hibernate é uma ferramenta de ORM (banco de dados), não de testes.\nC) Incorreta. O Spring é referência no desenvolvimento moderno de microsserviços.\nD) Incorreta. O JUnit é para testes unitários, não para interagir com bancos de dados.\nE) Incorreta. O Spring Boot utiliza servidores embutidos (embedded), eliminando a necessidade de instalá-los de forma externa ou independente."
+  }
+]

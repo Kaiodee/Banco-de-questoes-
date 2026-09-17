@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco de Questões Local - Revisão e Cadernos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <span class="mark">BQ</span>
+          <div class="brand-copy">
+            <p class="eyebrow">CENTRO DE REVISÃO</p>
+            <h1>Banco de Questões</h1>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="questoes">Questões</button>
+            <button class="tab-btn" data-tab="cadernos">Cadernos</button>
+            <button class="tab-btn" data-tab="nova">Nova questão</button>
+            <button class="tab-btn" data-tab="importar">Importar JSON</button>
+          </div>
+          <button id="theme-toggle" class="btn btn-ghost" title="Alternar tema">
+            🌙
+          </button>
+        </div>
+      </div>
+
+      <div id="view-questoes">
+        <div class="panel">
+          <h2>Filtrar e Focar</h2>
+
+          <div
+            class="row"
+            style="
+              margin-bottom: 16px;
+              border-bottom: 1px dashed var(--line);
+              padding-bottom: 16px;
+            "
+          >
+            <div class="field" style="max-width: 320px; flex: 2">
+              <label style="color: var(--teal-dark); font-weight: 700"
+                >🎯 Área de Formação (Obrigatório)</label
+              >
+              <select
+                id="f-area-formacao"
+                style="
+                  background: var(--surface);
+                  border: 2px solid var(--teal);
+                  font-weight: 600;
+                "
+              >
+                <option value="">-- Selecione para Carregar Questões --</option>
+                <option value="TI">Tecnologia da Informação</option>
+                <option value="Direito">Direito</option>
+                <option value="Geral">Geral / Outros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field" style="flex: 2; min-width: 220px">
+              <label>Palavra-chave</label>
+              <input
+                id="f-palavra"
+                type="text"
+                placeholder="Buscar no enunciado..."
+                autocomplete="off"
+              />
+            </div>
+            <div class="field">
+              <label>Foco (Desempenho)</label>
+              <select id="f-status">
+                <option value="">Todas</option>
+                <option value="erradas">Revisar Erradas</option>
+                <option value="corretas">Apenas Corretas</option>
+                <option value="novas">Não Respondidas</option>
+                <option value="recentes">Adicionadas Recentemente</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Tipo de questão</label>
+              <select id="f-tipo">
+                <option value="">Todos os tipos</option>
+                <option value="multipla">Múltipla escolha</option>
+                <option value="certo-errado">Certo ou Errado</option>
+              </select>
+            </div>
+
+            <div class="field search-select-container" id="container-banca">
+              <label>Banca</label>
+              <input
+                id="f-banca"
+                type="text"
+                placeholder="Selecione..."
+                autocomplete="off"
+              />
+              <div class="search-select-dropdown" id="dropdown-banca"></div>
+            </div>
+
+            <div
+              class="field search-select-container"
+              id="container-instituicao"
+            >
+              <label>Instituição</label>
+              <input
+                id="f-instituicao"
+                type="text"
+                placeholder="Selecione..."
+                autocomplete="off"
+              />
+              <div
+                class="search-select-dropdown"
+                id="dropdown-instituicao"
+              ></div>
+            </div>
+
+            <div
+              class="field search-select-container"
+              id="container-disciplina"
+            >
+              <label>Disciplina</label>
+              <input
+                id="f-disciplina"
+                type="text"
+                placeholder="Selecione..."
+                autocomplete="off"
+              />
+              <div
+                class="search-select-dropdown"
+                id="dropdown-disciplina"
+              ></div>
+            </div>
+
+            <div class="field search-select-container" id="container-assunto">
+              <label>Assunto</label>
+              <input
+                id="f-assunto"
+                type="text"
+                placeholder="Selecione..."
+                autocomplete="off"
+              />
+              <div class="search-select-dropdown" id="dropdown-assunto"></div>
+            </div>
+
+            <div class="field search-select-container" id="container-ano">
+              <label>Ano</label>
+              <input
+                id="f-ano"
+                type="text"
+                placeholder="Selecione..."
+                autocomplete="off"
+              />
+              <div class="search-select-dropdown" id="dropdown-ano"></div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 12px">
+            <button class="btn btn-ghost" id="btn-limpar">
+              Limpar filtros
+            </button>
+            <button class="btn btn-primary" id="btn-salvar-filtro">
+              Salvar filtro atual
+            </button>
+          </div>
+          <div class="chiprow" id="active-chips"></div>
+          <div class="chiprow" id="saved-chips"></div>
+        </div>
+
+        <div class="countbar">
+          <div class="count">Encontramos <b id="qcount">0</b> questões</div>
+          <div style="display: flex; align-items: center; gap: 8px">
+            <label
+              style="font-size: 11px; font-weight: 600; color: var(--muted)"
+              >POR PÁGINA:</label
+            >
+            <select
+              id="f-per-page"
+              style="
+                font-family: &quot;Inter&quot;;
+                font-size: 13px;
+                padding: 4px;
+                border-radius: 6px;
+                border: 1px solid var(--line);
+              "
+            >
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="qlist"></div>
+        <div id="pagination-wrapper" class="pagination"></div>
+      </div>
+
+      <div id="view-cadernos" style="display: none">
+        <div class="panel">
+          <h2>Meus Cadernos de Questões</h2>
+          <p
+            style="
+              font-size: 13.5px;
+              color: var(--muted);
+              line-height: 1.6;
+              margin-top: -4px;
+            "
+          >
+            Crie cadernos para agrupar questões específicas. Para adicionar
+            questões a um caderno, use o botão <b>+ Caderno</b> diretamente no
+            cartão da questão.
+          </p>
+          <div class="row" style="margin-top: 15px; margin-bottom: 15px">
+            <button class="btn btn-primary btn-sm" id="btn-novo-caderno">
+              + Criar Caderno Vazio
+            </button>
+          </div>
+          <div id="cadernos-list" class="chiprow"></div>
+        </div>
+      </div>
+
+      <div id="view-nova" style="display: none">
+        <div class="panel">
+          <h2>Adicionar questão ao banco</h2>
+          <div class="row">
+            <div class="field">
+              <label>Banca</label
+              ><input
+                id="n-banca"
+                type="text"
+                placeholder="FGV, CESPE, FCC..."
+              />
+            </div>
+            <div class="field">
+              <label>Instituição</label
+              ><input
+                id="n-instituicao"
+                type="text"
+                placeholder="Órgão/empresa"
+              />
+            </div>
+            <div class="field">
+              <label>Ano</label
+              ><input id="n-ano" type="number" placeholder="2024" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label>Disciplina</label
+              ><input
+                id="n-disciplina"
+                type="text"
+                placeholder="Engenharia de Software"
+              />
+            </div>
+            <div class="field">
+              <label>Assunto</label
+              ><input
+                id="n-assunto"
+                type="text"
+                placeholder="Desenvolvimento de Software"
+              />
+            </div>
+            <div class="field">
+              <label>Cargo</label
+              ><input id="n-cargo" type="text" placeholder="Analista de TI" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field" style="flex: 1">
+              <label>Enunciado</label>
+              <textarea
+                id="n-enunciado"
+                placeholder="Digite o texto da questão..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 4px">
+            <div class="field" style="flex: 1">
+              <label
+                >Alternativas — marque a correta e preencha as
+                explicações</label
+              >
+              <div class="optbuild" id="optbuild"></div>
+              <div style="margin-top: 8px">
+                <button
+                  class="btn btn-ghost btn-sm"
+                  id="btn-add-opt"
+                  type="button"
+                >
+                  + Adicionar alternativa
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field" style="flex: 1">
+              <label>Comentário Geral (opcional)</label>
+              <textarea
+                id="n-comentario"
+                placeholder="Explicação geral da questão..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button class="btn btn-ghost" id="btn-limpar-form">Limpar</button>
+            <button class="btn btn-primary" id="btn-salvar-questao">
+              Salvar questão
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="view-importar" style="display: none">
+        <!-- NOVO ESPAÇO: Importar Questão com Imagem -->
+        <div class="panel" style="margin-top: 20px">
+          <h2>Importar Questão Única com Imagem</h2>
+          <p
+            style="
+              font-size: 13.5px;
+              color: var(--muted);
+              line-height: 1.6;
+              margin-top: -4px;
+            "
+          >
+            Cole o JSON de <b>uma única questão</b> e selecione o arquivo de
+            imagem correspondente. A imagem será salva junto com a questão e
+            exibida abaixo do enunciado.
+          </p>
+
+          <div class="row" style="margin-top: 14px; margin-bottom: 14px">
+            <div class="field" style="max-width: 320px">
+              <label style="color: var(--teal-dark); font-weight: 700"
+                >🎯 Área de Formação (Obrigatório)</label
+              >
+              <select
+                id="import-area-img"
+                style="
+                  background: var(--surface);
+                  border: 2px solid var(--teal);
+                  font-weight: 600;
+                "
+              >
+                <option value="">-- Selecione a Área --</option>
+                <option value="TI">Tecnologia da Informação</option>
+                <option value="Direito">Direito</option>
+                <option value="Geral">Geral / Outros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field" style="flex: 1">
+              <label>JSON da Questão</label>
+              <textarea
+                id="import-json-img"
+                style="
+                  min-height: 120px;
+                  font-family: &quot;IBM Plex Mono&quot;, monospace;
+                  font-size: 12.5px;
+                "
+                placeholder="Cole o JSON de uma questão aqui..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="row" style="align-items: center; margin-top: 14px">
+            <div class="field" style="flex: 1">
+              <label>Arquivo de Imagem (.png, .jpg, .webp)</label>
+              <input
+                type="file"
+                id="import-file-img"
+                accept="image/png, image/jpeg, image/jpg, image/webp"
+                style="padding: 6px"
+              />
+            </div>
+            <span
+              id="import-status-img"
+              style="
+                font-size: 13px;
+                color: var(--muted);
+                font-weight: 600;
+                margin-left: 10px;
+              "
+            ></span>
+          </div>
+
+          <div class="form-footer">
+            <button class="btn btn-ghost" id="btn-limpar-import-img">
+              Limpar
+            </button>
+            <button class="btn btn-primary" id="btn-importar-img">
+              Importar Questão + Imagem
+            </button>
+          </div>
+        </div>
+        <div class="panel">
+          <!-- Adicione este bloco dentro de #view-importar, antes do <div class="row"> do textarea -->
+          <div class="row" style="margin-top: 14px; margin-bottom: 14px">
+            <div class="field" style="max-width: 320px">
+              <label style="color: var(--teal-dark); font-weight: 700"
+                >🎯 Área de Formação (Obrigatório)</label
+              >
+              <select
+                id="import-area"
+                style="
+                  background: var(--surface);
+                  border: 2px solid var(--teal);
+                  font-weight: 600;
+                "
+              >
+                <option value="">-- Selecione a Área para Importar --</option>
+                <option value="TI">Tecnologia da Informação</option>
+                <option value="Direito">Direito</option>
+                <option value="Geral">Geral / Outros</option>
+              </select>
+            </div>
+          </div>
+          <h2>Importar questões em lote (JSON)</h2>
+          <p
+            style="
+              font-size: 13.5px;
+              color: var(--muted);
+              line-height: 1.6;
+              margin-top: -4px;
+            "
+          >
+            Cole um array JSON seguindo o padrão abaixo, ou envie um arquivo
+            <span
+              class="qid"
+              style="font-family: &quot;IBM Plex Mono&quot;, monospace"
+              >.json</span
+            >.
+          </p>
+          <pre
+            id="schema-example"
+            style="
+              background: var(--bg);
+              border: 1px solid var(--line);
+              border-radius: 8px;
+              padding: 14px;
+              font-family: &quot;IBM Plex Mono&quot;, monospace;
+              font-size: 12px;
+              line-height: 1.6;
+              overflow: auto;
+            "
+          >
+[
+    {
+      "banca": "FGV",
+      "instituicao": "DATAPREV",
+      "ano": 2024,
+      "disciplina": "Engenharia de Software",
+      "enunciado": "É correto afirmar que Gherkin é uma linguagem",
+      "opcoes": [
+        { 
+          "letra": "A", 
+          "texto": "de programação de alto desempenho.", 
+          "explicacao": "Gherkin não é uma linguagem de programação." 
+        },
+        { 
+          "letra": "B", 
+          "texto": "de domínio para descrever comportamento legível.", 
+          "explicacao": "Isso descreve o uso do Gherkin no contexto de BDD." 
+        }
+      ],
+      "correta": "B",
+      "comentario": "Comentário geral opcional."
+    }
+]</pre
+          >
+          <div class="row" style="margin-top: 14px">
+            <div class="field" style="flex: 1">
+              <label>Colar JSON aqui</label>
+              <textarea
+                id="import-json"
+                style="
+                  min-height: 160px;
+                  font-family: &quot;IBM Plex Mono&quot;, monospace;
+                  font-size: 12.5px;
+                "
+                placeholder="Cole o array JSON de questões..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="row" style="align-items: center">
+            <input
+              type="file"
+              id="import-file"
+              accept=".json,application/json"
+            />
+            <span
+              id="import-status"
+              style="font-size: 13px; color: var(--muted)"
+            ></span>
+          </div>
+          <div class="form-footer">
+            <button class="btn btn-ghost" id="btn-limpar-import">Limpar</button>
+            <button class="btn btn-primary" id="btn-importar">
+              Importar questões
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="side-panel">
+      <div id="timer-widget">
+        <h4>
+          ⏱️ Modo Foco
+          <button
+            id="btn-timer-edit"
+            class="icon-btn"
+            style="padding: 0; margin-left: 4px; font-size: 14px"
+            title="Configurar tempo"
+          >
+            ⚙️
+          </button>
+        </h4>
+        <div class="time" id="timer-display">25:00</div>
+        <div class="controls">
+          <button id="btn-timer-start" class="btn btn-primary btn-sm">▶</button>
+          <button id="btn-timer-pause" class="btn btn-ghost btn-sm">⏸</button>
+          <button id="btn-timer-reset" class="btn btn-ghost btn-sm">↺</button>
+        </div>
+      </div>
+
+      <div id="stats-widget">
+        <h4 style="justify-content: space-between; display: flex; width: 100%">
+          <span>📊 Rendimento Geral</span>
+          <button
+            id="btn-reset-stats"
+            class="icon-btn"
+            style="padding: 0 4px; font-size: 13px"
+            title="Reiniciar estatísticas"
+          >
+            ↺
+          </button>
+        </h4>
+        <div class="chart-container">
+          <canvas id="performanceChart"></canvas>
+        </div>
+        <div id="chart-legend-labels"></div>
+      </div>
+    </div>
+
+    <div id="custom-modal" class="modal-overlay">
+      <div class="modal-box">
+        <h3 id="modal-title">Título</h3>
+        <p id="modal-msg"></p>
+        <input type="text" id="modal-input" autocomplete="off" />
+        <div class="modal-footer">
+          <button id="modal-btn-cancel" class="btn btn-ghost">Cancelar</button>
+          <button id="modal-btn-ok" class="btn btn-primary">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
