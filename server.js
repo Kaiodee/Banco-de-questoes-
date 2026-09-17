@@ -1,9 +1,11 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const Database = require('better-sqlite3');
 
 const PORT = 3000;
 const FILE_PATH = path.join(__dirname, 'questoes.json');
+const DATABASE_PATH = path.join(__dirname, 'questoes.db');
 const MIME_TYPES = {
     '.css': 'text/css; charset=utf-8',
     '.html': 'text/html; charset=utf-8',
@@ -11,9 +13,56 @@ const MIME_TYPES = {
     '.json': 'application/json; charset=utf-8'
 };
 
-// Garante que o arquivo JSON exista e tenha um formato de array válido do início
-if (!fs.existsSync(FILE_PATH) || fs.readFileSync(FILE_PATH, 'utf-8').trim() === '') {
-    fs.writeFileSync(FILE_PATH, JSON.stringify([], null, 2));
+const database = new Database(DATABASE_PATH);
+database.pragma('journal_mode = WAL');
+database.exec(`
+    CREATE TABLE IF NOT EXISTS questions (
+        id TEXT PRIMARY KEY,
+        data TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+    )
+`);
+
+function readLegacyQuestions() {
+    if (!fs.existsSync(FILE_PATH)) return [];
+
+    try {
+        const content = fs.readFileSync(FILE_PATH, 'utf-8').trim();
+        if (!content) return [];
+        const questions = JSON.parse(content);
+        return Array.isArray(questions) ? questions : [];
+    } catch (error) {
+        console.error('Não foi possível migrar questoes.json:', error.message);
+        return [];
+    }
+}
+
+function getQuestions() {
+    return database.prepare('SELECT data FROM questions ORDER BY rowid DESC').all()
+        .map(row => JSON.parse(row.data));
+}
+
+function replaceQuestions(questions) {
+    const insertQuestion = database.prepare(
+        'INSERT INTO questions (id, data) VALUES (?, ?)'
+    );
+    const replaceAll = database.transaction((items) => {
+        database.prepare('DELETE FROM questions').run();
+        items.forEach((question, index) => {
+            const id = String(question.id || `imported-${Date.now()}-${index}`);
+            insertQuestion.run(id, JSON.stringify({ ...question, id }));
+        });
+    });
+
+    replaceAll(questions);
+}
+
+if (database.prepare('SELECT COUNT(*) AS count FROM questions').get().count === 0) {
+    const legacyQuestions = readLegacyQuestions();
+    if (legacyQuestions.length > 0) {
+        replaceQuestions(legacyQuestions);
+        console.log(`📦 ${legacyQuestions.length} questão(ões) migrada(s) do JSON para SQLite.`);
+    }
 }
 
 const server = http.createServer((req, res) => {
@@ -28,35 +77,28 @@ const server = http.createServer((req, res) => {
         return;
     }
 
-    // Rota para pegar as questões salvas no arquivo JSON
+    // Rota para pegar as questões salvas no SQLite
     if (req.url === '/api/questions' && req.method === 'GET') {
-        fs.readFile(FILE_PATH, 'utf-8', (err, data) => {
-            if (err) {
-                res.writeHead(500, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ error: 'Erro ao ler arquivo' }));
-                return;
-            }
+        try {
             res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-            res.end(data);
-        });
+            res.end(JSON.stringify(getQuestions()));
+        } catch (error) {
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ error: 'Erro ao ler banco de dados' }));
+        }
     } 
-    // Rota para salvar todas as questões no arquivo JSON
+    // Rota para substituir as questões salvas no SQLite
     else if (req.url === '/api/questions' && req.method === 'POST') {
         let body = '';
         req.on('data', chunk => { body += chunk.toString(); });
         req.on('end', () => {
             try {
                 const questions = JSON.parse(body);
-                fs.writeFile(FILE_PATH, JSON.stringify(questions, null, 2), 'utf-8', (err) => {
-                    if (err) {
-                        res.writeHead(500, { 'Content-Type': 'application/json' });
-                        res.end(JSON.stringify({ error: 'Erro ao escrever no arquivo' }));
-                        return;
-                    }
-                    res.writeHead(200, { 'Content-Type': 'application/json' });
-                    res.end(JSON.stringify({ success: true }));
-                });
-            } catch (e) {
+                if (!Array.isArray(questions)) throw new Error('O corpo precisa ser um array');
+                replaceQuestions(questions);
+                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ success: true }));
+            } catch (error) {
                 res.writeHead(400, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ error: 'JSON inválido enviado' }));
             }
@@ -92,5 +134,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
     console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
-    console.log(`💾 Salvando dados diretamente em: ${FILE_PATH}`);
+    console.log(`💾 Banco SQLite: ${DATABASE_PATH}`);
 });
